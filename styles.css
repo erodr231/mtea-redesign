@@ -47,5 +47,13 @@ table {
 }
 
 :root{
-    --
+    --primary-accent: #7d916c;
+    --secondary-accent: #9580a4;
+    --primary-text: #463C27;
+    --secondary-text: #6C6351;
+    --light-background: #FFFCF2;
+    --card: #ECE0DA;
+    --dark-background: #1a1a1a;
+    --font-secondary: 'Quicksand', sans-serif;
+    --font-primary: 'Bpmf Huninn', sans-serif;
 }
