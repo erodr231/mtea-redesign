@@ -15,7 +15,7 @@
             </div>
             
             <ul>
-                <li><a href="#drinks">Featured Drinks</a></li>
+                <li><a href="#featuredDrinks">Featured Drinks</a></li>
                 <li><a href="#story">Our Story</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#franchising">Franchising</a></li>
@@ -45,12 +45,12 @@
          </div>
 
          <div>
-            <section class="#story">
+            <section class="story">
                 <h2>About Section</h2>
                 <p>Some about information here</p>
             </section>
 
-            <div>
+            <section class="locations">
                 <h2>Locations</h2>
                 <address></address>
                 <a href="tel:">telephone number here</a>
@@ -61,14 +61,119 @@
                 <address></address>
                 <a href="tel:">telephone number here</a>
             </div>
+
+
+            <section class="featuredDrinks">
+                <h2>Featured Drinks</h2>
+                <img src="images/brown-sugar-milktea.jpg" alt="add later">
+                <p>Drink Name</p>
+                <p>Description of drink</p>
+                <ul class="drinkButtons">
+                    <li><a>Drink 1</a></li>
+                    <li><a>Drink 2</a></li>
+                    <li><a>Drink 3</a></li>
+                    <li><a>Drink 4</a></li>
+                    <li><a>Drink 5</a></li>
+                </ul>
+            </section>
+
+
+            <section class="gamePlay">
+                <h2>guess today's lucky number fo 10% off!</h2>
+                <p>Enter a number between 1-10 below. We will generate a random number. If your number matches, get 10% off your next order!</p>
+                <input type="number" min="1" max="10" id="randomNum" required>
+                <button>Guess!</button>
+                <p>Try again next time!</p>
+                <p>Your Guess: 4</p>
+                <p>Winning Number: 6</p>
+            </section>
+
+            <section class="franchising">
+                <h2>Franchise FAQ</h2>
+                <p><span class="bold">What is the initial total investment cost for my franchise?</span>
+                The estimated initial investment for a MTea & Coffee is between $125,000 – $250,000 depending upon whether you choose to a 1st generation or 2nd generation restaurant as your store front.</p>
+
+                <p><span class="bold">Do MTea & Coffee, LLC provide financing?</span>
+                We do not offer any financing options at this time.</p>
+
+                <p><span class="bold">What is the initial Franchise Fee?</span>
+                The Initial Fees for. franchise are Thirty Thousand Dollars ($30,000.00).</p>
+
+                <p><span class="bold">What is the term of the Franchise Agreement?</span> 
+                The term of the Franchise is 5 years.</p>
+
+                <p><span class="bold">What is Teahouse Tapioca and Tea Royalty Rates?</span>
+                The rate range from 5% - 7% gross revenue</p>
+
+                <p><span class="bold">What about training?</span>
+                Initially, You should have at least three people working at the business. At least one must be responsible for business operations and management, one person to take orders and the other must be, at all times, a MTea Tea Drink Specialist(“DS”). Both of You must successfully complete Our initial training program.  We will decide whether You and Your DS successfully complete the initial training program based upon knowledge test results and Our observations of Your ability to use the knowledge effectively.</p>
+
+                <p>During Your franchise term, We will provide initial training to you and up to one additional person as part of Your Initial Fee. After the first two people, You must bear the cost of training additional DS or managers. In all cases, You are solely responsible for all salaries, compensation, benefits, travel and related expenses for trainees.</p>
+
+                <p>We may require You or Your DS to attend additional training at a location We determine. Generally, You must pay Our usual fee(s) for mandatory training. In any event, You are solely responsible for all salaries, compensation, benefits and travel related expenses of trainees.</p>
+
+                <p>We may provide or make available training materials and equipment for You or Your employees and may charge a fee.  All training materials are Trade Secrets. You must require any of Your employees to successfully complete any training program(s) if We designate them as mandatory</p>
+
+                <p><span class="bold">How do I get started?</span></p>
+                <ul>
+                    <li>The first step is to fill out the Franchise Application Form online.</li>
+                    <li>Upon receipt of the Franchise Application, and supporting documents, we will review and determine whether you are approved to receive our Franchise Disclosure Document (FDD) which outlines our agreement, company history and financials.</li>
+                    <li>Enclosed with the FDD is a Preliminary Agreement. By sending us the signed Preliminary Agreement, along with a $30,000 deposit towards your Franchise Fee, you engage us in the process of opening your business along with purchasing your territory.</li>
+
+                </ul>
+                
+                <p><span class="bold">Upon executing the Preliminary Agreement, what are the next steps?</span>
+                The next steps in the planning process include: obtaining final financing, Business entity and License setup, Franchise Agreement execution, Site Selection, lease negotiations (if applicable), Initial comprehensive Training, Grand Opening planning, Grand Opening Training along with other steps to open your business. Don’t worry – we walk you through it all.</p>
+
+                
+
+                <p><span class="italic">DISCLAIMER:</span>
+                The franchising information contained in this website is not intended as an offer to sell a franchise or the solicitation of an offer to buy a franchise.</p>
+            </section>
+
+            <div>
+                <h2>Contact Us!</h2>
+                <form>
+                    <!-- <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname"> -->
+
+
+                    <label for="fname">full name</label>
+                    <input type="text" id="fname" name="fname">
+
+                    <label for="email">email</label>
+                    <input type="email" id="email" name="email">
+
+                    <label for="phoneNumber">phone number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber">
+
+                    <label for="comments">comments</label>
+                    <textarea id="comments" name="comments"></textarea>
+
+                    <fieldset>
+                        <legend>contact preference</legend>
+
+                        <div>
+                            <input type="radio" id="emailPref" name="contact" value="email" checked>
+                            <label for="emailPref">email</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="phonePref" name="contact" value="phone">
+                            <label for="phonePref">phone</label>
+                        </div>
+                    </fieldset>
+
+                    <p>Thank you message!</p>
+                </form>
+            </div>
          </div>
-        
-
-
     </main>
     
     <footer>
         <!-- social media links here -->
+         <a href="https://www.facebook.com/Mteabeawesome/"><img src="images/facebook-svgrepo-com.svg" alt="Facebook logo"></a>
+         <a href="https://www.instagram.com/mteancoffee/?hl=en"><img src="images/instagram-svgrepo-com.svg" alt="Instagram logo"></a>
         <p>Copyright © Emely Rodriguez</p>
     </footer>
 </body>
