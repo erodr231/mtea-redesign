@@ -48,8 +48,7 @@
     <main>
         <!-- edit alt text later -->
         <div class="hero-img">
-        <h2>Some text inside here</h2>
-        <img src="images/hero-img.jpg" alt="edit later">
+            <img src="images/hero-img.jpg" alt="edit later">
         </div>
 
          <div class="aboutInformation">
@@ -91,21 +90,32 @@
 
         <section id="featuredDrinks">
             <h2>Featured Drinks</h2>
-            <img src="images/brown-sugar-milktea.jpg" alt="add later">
-            <p>Drink Name</p>
-            <p>Description of drink</p>
+           
+            <div class="drinkDisplay">
+                <div class="drinkContainer">
+                    <img id="drinkImage" src="images/brown-sugar-milktea.jpg" alt="Brown Sugar Milk Tea ">
+                
+                </div>
+                
+                <div id="drinkInfo">
+                    <h3 id="drinkName">Drink Name</h3>
+                    <p id="drinkDescription">Sweet brown sugar syrup with creamy milk and chewy boba.</p>
+                
+                </div>
+            </div>
+
             <ul class="drinkButtons">
-                <li><a>Drink 1</a></li>
-                <li><a>Drink 2</a></li>
-                <li><a>Drink 3</a></li>
-                <li><a>Drink 4</a></li>
-                <li><a>Drink 5</a></li>
+                <li><button>Brown Sugar Milk Tea</button></li>
+                <li><button>Creme Brulee Milk Tea</button></li>
+                <li><button>Dragonfruit Peach Tea</button></li>
+                <li><button>Mangonada</button></li>
+                <li><button>Taro Milk Tea</button></li>
             </ul>
         </section>
 
 
         <section class="gamePlay">
-            <h2>guess today's lucky number fo 10% off!</h2>
+            <h2>guess today's lucky number for 10% off!</h2>
             <p>Enter a number between 1-10 below. We will generate a random number. If your number matches, get 10% off your next order!</p>
             <input type="number" min="1" max="10" id="randomNum" required>
             <button id="guessBtn">Guess!</button>
