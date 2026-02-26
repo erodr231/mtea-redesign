@@ -98,8 +98,8 @@
                 </div>
                 
                 <div id="drinkInfo">
-                    <h3 id="drinkName">Drink Name</h3>
-                    <p id="drinkDescription">Sweet brown sugar syrup with creamy milk and chewy boba.</p>
+                    <h3 id="drinkName">Brown Sugar Milk Tea</h3>
+                    <p id="drinkDescription">Brown Sugar Milk Tea is our best seller and most popular drink, loved for its rich caramel flavor and creamy, comforting texture. Originating from Taiwan, the birthplace of bubble tea, this classic features freshly brewed black tea blended with silky milk and swirled with deep, molasses-like brown sugar syrup. The warm, chewy tapioca pearls are coated in caramelized brown sugar, creating a smooth, sweet, and slightly smoky flavor in every sip, perfectly balanced and delicious!</p>
                 
                 </div>
             </div>
@@ -117,9 +117,12 @@
         <section class="gamePlay">
             <h2>guess today's lucky number for 10% off!</h2>
             <p>Enter a number between 1-10 below. We will generate a random number. If your number matches, get 10% off your next order!</p>
-            <input type="number" min="1" max="10" id="randomNum" required>
-            <button id="guessBtn">Guess!</button>
-            <p>Try again next time!</p>
+            <div id="gameInput">
+                <input type="input" id="userInput" required>
+                <button id="guessBtn">Guess!</button>
+            </div>
+
+            <p id="gameMessage">Try again next time!</p>
             <p id="userGuess">Your Guess:</p>
             <p id="winningNum">Winning Number:</p>
         </section>
