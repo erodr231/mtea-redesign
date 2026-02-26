@@ -48,11 +48,11 @@ table {
 
 :root{
     --primary-accent: #7d916c;
-    --secondary-accent: #9580a4;
+    --secondary-accent: #b9a3c9;
     --primary-text: #29261E;
     --secondary-text: #5E5A54;
     --light-background: #FFFCF2;
-    --card: #ECE0DA;
+    --card: #fdf6df;
     --dark-background: #1a1a1a;
     --font-secondary: 'Quicksand', sans-serif;
     --font-primary: "Bpmf Huninn", "Arial", sans-serif;
@@ -143,6 +143,7 @@ h2{
     gap: 50px;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 #locations{
@@ -152,13 +153,35 @@ h2{
     font-family: var(--font-secondary);
     background-color: var(--card);
     border: 2px solid var(--dark-background);
-    padding: 20px 100px 100px 20px;
+    padding: 20px 50px 70px 30px;
     border-radius: 25px;
+    box-shadow: 10px 10px var(--dark-background);
+}
+#story{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
+#story h2{
+    font-size: 4rem;
+}
+
+#story p:last-child{
+    
+    max-width: 460px;
+}
+
+.accent{
+    font-family: var(--font-secondary);
+    font-size: 3rem;
+    color: var(--primary-accent);
+    font-weight: bold;
+    
+}
 #locations h2{
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    padding-left: 20px;
 }
 
 #story p{
@@ -166,6 +189,7 @@ h2{
 }
 
 .bold{
+    font-family: var(--font-secondary);
     font-weight: 800;
 }
 
