@@ -140,7 +140,41 @@ h2{
 
 .aboutInformation{
     display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
 }
+
+#locations{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: var(--font-secondary);
+    background-color: var(--card);
+    border: 2px solid var(--dark-background);
+    padding: 20px 100px 100px 20px;
+    border-radius: 25px;
+}
+
+#locations h2{
+    display: flex;
+    justify-content: center;
+}
+
+#story p{
+    max-width: 500px;
+}
+
+.bold{
+    font-weight: 800;
+}
+
+a[href="tel:"]{
+    color: ;
+    text-decoration: underline;
+    color: #543e63;
+}
+
 
 /* buttons & links */
 a{
