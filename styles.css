@@ -76,6 +76,10 @@ p, li{
     color: var(--primary-text);
 }
 
+.italic{
+    font-style: italic;
+}
+
 /* layout */
 header, footer{
     background-color: var(--light-background);
@@ -221,8 +225,6 @@ a[href="tel:"]{
     gap: 20px;
 }
 
-
-
 .drinkContainer{
     width: 450px;
     height: 450px;
@@ -275,14 +277,35 @@ a[href="tel:"]{
 }
 
 #franchising{
+    display: flex;
+    gap: 25px;
     background-color: var(--card);
     margin-top: 20px;
-    padding: 50px;
+    padding: 50px 100px;
 }
 
 #franchising h2{
     font-size: 3rem;
     margin-bottom: 20px;
+}
+
+.franchisingLeft, .franchisingRight{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question{
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+.indent{
+    margin-left: 25px;
+}
+
+.franchisingRight p{
+    max-width: 500px;
 }
 
 /* buttons & links */
