@@ -56,6 +56,7 @@ table {
     --dark-background: #1a1a1a;
     --font-secondary: 'Quicksand', sans-serif;
     --font-primary: "Bpmf Huninn", "Arial", sans-serif;
+    --border: 2px solid var(--dark-background);
 }
 
 /* typography */
@@ -243,14 +244,14 @@ a[href="tel:"]{
 }
 .gamePlay{
     background-color: var(--secondary-accent);
-    padding: 100px;
+    padding: 100px 100px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .gamePlay h2{
-    font-size: 2.5em;
+    font-size: 3em;
     padding: 0px 20px 20px;
 }
 
@@ -260,15 +261,28 @@ a[href="tel:"]{
     margin-bottom: 15px;
 }
 
+
 #gameInput input{
     max-width: 75px;
-    padding: 10px;
+    padding: 13px;
     border-radius: 50px;
+    border: var(--border);
 }
 
 #gameMessage{
     font-style: italic;
     padding: 10px;
+}
+
+#franchising{
+    background-color: var(--card);
+    margin-top: 20px;
+    padding: 50px;
+}
+
+#franchising h2{
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 /* buttons & links */
@@ -305,4 +319,8 @@ button{
     border-radius: 50px;
     padding: 10px 50px;
     border: 2px solid var(--dark-background);
+    background-color: #543e63;
+    color: var(--card);
+    font-family: var(--font-secondary);
+    font-weight: bolder;
 }
