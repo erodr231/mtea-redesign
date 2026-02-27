@@ -278,10 +278,22 @@ a[href="tel:"]{
 
 #franchising{
     display: flex;
-    gap: 25px;
+    flex-direction: column;
+    gap: 10px;
     background-color: var(--card);
+    padding: 20px;
+}
+
+.franchTop{
+    display: flex;
+    gap: 25px;
     margin-top: 20px;
-    padding: 50px 100px;
+}
+
+
+
+.franchTop div{
+    flex: 1;
 }
 
 #franchising h2{
@@ -304,10 +316,45 @@ a[href="tel:"]{
     margin-left: 25px;
 }
 
-.franchisingRight p{
-    max-width: 500px;
+.franchBottom{
+    padding: 0px 20px;
 }
 
+.franchBottom p:last-of-type{
+    padding-top: 15px;
+}
+
+#contact{
+    background-color: var(--light-background);
+    
+}
+
+#contact h2{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.formContainer{
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    border: var(--border);
+    border-radius: 25px;
+    padding: 2rem;
+    margin: 2rem 15rem;
+    background-color: var(--primary-accent);
+}
+
+#contactForm{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+fieldset{
+    display: flex;
+}
 /* buttons & links */
 a{
     text-decoration: none;
@@ -346,4 +393,11 @@ button{
     color: var(--card);
     font-family: var(--font-secondary);
     font-weight: bolder;
+}
+
+#contactForm button{
+    border: var(--border);
+    border-radius: 45px;
+    background-color: var(--card);
+    padding: 10px 20px;
 }
