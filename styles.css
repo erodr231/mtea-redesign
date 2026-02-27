@@ -130,7 +130,7 @@ nav{
 
 .navButtons a{
     background-color: var(--primary-text);
-    color: var(--card);
+    color: var(--light-background);
     padding: 15px;
     border-radius: 50px;
     outline: 2px solid var(--card);
@@ -276,7 +276,7 @@ a[href="tel:"]{
     padding: 10px;
 }
 
-#franchising{
+/* #franchising{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -322,7 +322,7 @@ a[href="tel:"]{
 
 .franchBottom p:last-of-type{
     padding-top: 15px;
-}
+} */
 
 #contact{
     background-color: var(--light-background);
@@ -330,6 +330,7 @@ a[href="tel:"]{
 }
 
 #contact h2{
+    color: #29261E;
     font-size: 4rem;
     text-align: center;
 }
@@ -384,11 +385,15 @@ fieldset{
 }
 
 footer{
-    background-color: rgb(230, 230, 230);
+    background-color: var(--light-background);
     padding: 20px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+footer p{
+    color: #787878;
 }
 
 footer a{
@@ -398,7 +403,7 @@ footer a{
 
 .required{
     font-weight: bold;
-    color: var(--primary-text);
+    color: #29261E;
     font-family: var(--font-primary);
     font-size: 1.5rem;
 }
@@ -412,6 +417,7 @@ button{
     background-color: transparent;
     border: transparent;
     cursor: pointer;
+    color: #1a1a1a;
 }
 
 .drinkButtons {
@@ -435,9 +441,9 @@ button{
 #gameInput button{
     border-radius: 50px;
     padding: 10px 50px;
-    border: 2px solid var(--dark-background);
+    border: 2px solid black;
     background-color: #543e63;
-    color: var(--card);
+    color: white;
     font-family: var(--font-secondary);
     font-weight: bolder;
 }
@@ -447,4 +453,11 @@ button{
     border-radius: 45px;
     background-color: var(--card);
     padding: 10px 20px;
+}
+
+body.darkMode{
+    --light-background: #1a1a1a;
+    --primary-text: #FFFCF2;
+    --card: #959595;
+    --dark-background: #FFFCF2;; 
 }
