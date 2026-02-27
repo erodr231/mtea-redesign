@@ -16,6 +16,11 @@ let gameMessage = document.getElementById("gameMessage")
 let displayUserGuess = document.getElementById("userGuess");
 let displayWinningNum = document.getElementById("winningNum");
 
+
+let contactForm = document.getElementById("contactForm"); // form elements
+let thanksMsg = document.getElementById("thanksMsg"); // once form submitted, thanks msg appears
+
+
 // ***** INFO *****
 const drinks = [ // array containing 5 different drinks
     {
@@ -53,6 +58,10 @@ const drinks = [ // array containing 5 different drinks
         alt: "Taro Milk Tea in a clear cup, light purple color with tapioca pearls at the bottom.",
     }
 ];
+
+// ** REGEX **
+let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+let regexPhone = /^\d{10}$/;
 
 
 // ***** event listeners*****
@@ -98,7 +107,6 @@ function gamePlay(){ // this function will run the game.
     let userGuess = Number(userInput.value) // get the user input, make sure it's a number
     let randomNum = Math.floor(Math.random() * 10) + 1; // generate random number from 1-10, look at zyBooks
     
-
     // display diff message if they won or not in gameMessage
     if (userGuess === " " || userGuess < 1 || userGuess > 10){
         gameMessage.textContent = "Please input a number 1-10.";
@@ -113,11 +121,19 @@ function gamePlay(){ // this function will run the game.
     } else{
         gameMessage.textContent = "Try again next time!";
 
-            // display the user's number in userGuess
+        // display the user's number in userGuess
         displayUserGuess.textContent = "Your guess: " + userGuess;
 
         // display the winner number in winningNum
         displayWinningNum.textContent = "Winning Number: " + randomNum;
     }
 }
-// ****** initialize ******
+
+function formSubmit(){ // on submit, handle validation
+    let fullName = document.getElementById("fname");
+    let email = document.getElementById("email");
+}
+
+function displayError(){ // if form is invalid, display error next to inputs
+
+}
