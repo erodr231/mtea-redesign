@@ -14,10 +14,14 @@ sunToggle.addEventListener("click", lightModeToggle);
 
 //dark mode toggles
 function darkModeToggle(){
+    document.body.classList.add("darkMode");
+
     moonToggle.hidden = true;
     sunToggle.hidden = false
 }
 function lightModeToggle(){
+    document.body.classList.remove("darkMode");
+
     moonToggle.hidden = false;
     sunToggle.hidden = true;
 }

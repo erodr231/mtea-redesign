@@ -157,6 +157,10 @@ h2{
     padding: 20px;
 }
 
+address p, #locations div p{
+    color: #1a1a1a;
+}
+
 #locations{
     display: flex;
     flex-direction: column;
@@ -193,6 +197,7 @@ h2{
 #locations h2{
     text-align: center;
     padding-left: 20px;
+    color: #1a1a1a;
 }
 
 #story p{
@@ -436,6 +441,11 @@ button{
 .drinkButtons button{
     font-size: 1rem;
     font-family: var(--font-secondary);
+    color: var(--dark-background);
+}
+
+.drinkButtons button:hover{
+    text-decoration: underline;
 }
 
 #gameInput button{
