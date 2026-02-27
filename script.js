@@ -98,20 +98,26 @@ function gamePlay(){ // this function will run the game.
     let userGuess = Number(userInput.value) // get the user input, make sure it's a number
     let randomNum = Math.floor(Math.random() * 10) + 1; // generate random number from 1-10, look at zyBooks
     
-    // display the user's number in userGuess
-    displayUserGuess.textContent = "Your guess: " + userGuess;
-
-    // display the winner number in winningNum
-    displayWinningNum.textContent = "Winning Number: " + randomNum;
 
     // display diff message if they won or not in gameMessage
-    if (userGuess === randomNum){
-        gameMessage.textContent = "Congrats! You won 10% off your next order."
-    } else{
-        gameMessage.textContent = "Try again next time!"
-    }
+    if (userGuess === " " || userGuess < 1 || userGuess > 10){
+        gameMessage.textContent = "Please input a number 1-10.";
+    } else if (userGuess === randomNum){
+        gameMessage.textContent = "Congrats! You won 10% off your next order.";
 
-    // ability to play again, clear input
-    userInput.value = "";
+        // display the user's number in userGuess
+        displayUserGuess.textContent = "Your guess: " + userGuess;
+
+        // display the winner number in winningNum
+        displayWinningNum.textContent = "Winning Number: " + randomNum;
+    } else{
+        gameMessage.textContent = "Try again next time!";
+
+            // display the user's number in userGuess
+        displayUserGuess.textContent = "Your guess: " + userGuess;
+
+        // display the winner number in winningNum
+        displayWinningNum.textContent = "Winning Number: " + randomNum;
+    }
 }
 // ****** initialize ******
