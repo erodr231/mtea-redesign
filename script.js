@@ -1,9 +1,6 @@
 // 1. Your JS should "use strict"; globally
 "use strict"
 
-const { use } = require("react");
-
-
 // ***** element selectors *****
 const moonToggle = document.querySelector(".moonToggle");
 const sunToggle = document.querySelector(".sunToggle");
@@ -62,6 +59,8 @@ const drinks = [ // array containing 5 different drinks
 moonToggle.addEventListener("click", darkModeToggle);
 sunToggle.addEventListener("click", lightModeToggle);
 
+guessBtn.addEventListener("click", gamePlay);// gamePlay guess btn
+
 // product display, add event listeners for each buttons, needs to loop through array, then go to function we created
 productDisplayBtn.forEach((button, index) => {
     button.addEventListener("click", () => {
@@ -100,10 +99,10 @@ function gamePlay(){ // this function will run the game.
     let randomNum = Math.floor(Math.random() * 10) + 1; // generate random number from 1-10, look at zyBooks
     
     // display the user's number in userGuess
-    displayUserGuess.textContent = " " + userGuess;
+    displayUserGuess.textContent = "Your guess: " + userGuess;
 
     // display the winner number in winningNum
-    displayWinningNum.textContent = " " + randomNum;
+    displayWinningNum.textContent = "Winning Number: " + randomNum;
 
     // display diff message if they won or not in gameMessage
     if (userGuess === randomNum){
@@ -112,4 +111,7 @@ function gamePlay(){ // this function will run the game.
         gameMessage.textContent = "Try again next time!"
     }
 
+    // ability to play again, clear input
+    userInput.value = "";
+}
 // ****** initialize ******
