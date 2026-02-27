@@ -391,6 +391,17 @@ footer{
     align-items: center;
 }
 
+footer a{
+    width: auto;
+    height: 100px;
+}
+
+.required{
+    font-weight: bold;
+    color: var(--primary-text);
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+}
 /* buttons & links */
 a{
     text-decoration: none;

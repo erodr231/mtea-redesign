@@ -48,7 +48,7 @@
     <main>
         <!-- edit alt text later -->
         <div class="hero-img">
-            <img src="images/hero-img.jpg" alt="edit later">
+            <img src="images/hero-img.jpg" alt="Selection of MTea’s signature boba, coffee, and smoothie drinks lined up horizontally.">
         </div>
 
          <div class="aboutInformation">
@@ -93,7 +93,7 @@
            
             <div class="drinkDisplay">
                 <div class="drinkContainer">
-                    <img id="drinkImage" src="images/brown-sugar-milktea.jpg" alt="Brown Sugar Milk Tea ">
+                    <img id="drinkImage" src="images/brown-sugar-milktea.jpg" alt="Brown sugar milk tea served on a black table.">
                 
                 </div>
                 
@@ -185,8 +185,8 @@
                 <h2>Contact Us!</h2>
                 <form id="contactForm">
                     <div>
-                        <label for="fname">full name</label>
-                        <input type="text" id="fname" name="fname">
+                        <label for="fname">full name<span class="required">*</span></label>
+                        <input type="text" id="fname" name="fname" required>
                     </div>
 
                     <div>
@@ -200,12 +200,12 @@
                     </div>
 
                     <div>
-                        <label for="comments">comments</label>
+                        <label for="comments">comments<span class="required">*</span></label>
                         <textarea id="comments" name="comments"></textarea>
                     </div>
 
                     <fieldset>
-                        <legend>contact preference</legend>
+                        <legend>contact preference<span class="required">*</span></legend>
 
                         <div>
                             <input type="radio" id="emailPref" name="contact" value="email" checked>
