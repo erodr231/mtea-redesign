@@ -326,6 +326,7 @@ a[href="tel:"]{
 
 #contact{
     background-color: var(--light-background);
+    margin: 20px 0px;
     
 }
 
@@ -342,6 +343,9 @@ a[href="tel:"]{
     padding: 2rem;
     margin: 2rem 15rem;
     background-color: var(--primary-accent);
+    width: 650px;
+    margin: 0 auto;
+    
 }
 
 #contactForm{
@@ -350,11 +354,44 @@ a[href="tel:"]{
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    margin-left: 110px;
+}
+
+#contactForm > div{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 7px;
+}
+
+#contactForm label{
+    width: 150px;
+    text-align: right;
+}
+
+#contactForm input, #contactForm textarea{
+    flex: .4;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+}
+fieldset, #submitBtn, #thanksMsg{
+    margin-right: 110px;
 }
 
 fieldset{
     display: flex;
 }
+
+footer{
+    background-color: rgb(223, 223, 223);
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* buttons & links */
 a{
     text-decoration: none;
