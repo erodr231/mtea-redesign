@@ -18,6 +18,11 @@ let displayWinningNum = document.getElementById("winningNum");
 
 
 let contactForm = document.getElementById("contactForm"); // form elements
+
+let fNameError = document.getElementById("fNameError");
+let emailError = document.getElementById("emailError");
+let phoneError = document.getElementById("phoneError");
+let commentsError = document.getElementById("commentsError");
 let thanksMsg = document.getElementById("thanksMsg"); // once form submitted, thanks msg appears
 
 
@@ -64,7 +69,7 @@ let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 let regexPhone = /^\d{10}$/;
 
 
-// ***** event listeners*****
+// ***** event listeners *****
 moonToggle.addEventListener("click", darkModeToggle);
 sunToggle.addEventListener("click", lightModeToggle);
 
@@ -76,6 +81,10 @@ productDisplayBtn.forEach((button, index) => {
         displayProduct(index); // initialize function
     });
 });
+
+
+// submit form button
+contactForm.addEventListener("submit", formSubmit)
 
 // ***** functions *****
 
@@ -129,11 +138,73 @@ function gamePlay(){ // this function will run the game.
     }
 }
 
-function formSubmit(){ // on submit, handle validation
+function formSubmit(e){ // on submit, handle validation
+    console.log("form submitted");
+    e.preventDefault();
+    clearErrors(); // clears previous errors
+
+
+    //gather input values
     let fullName = document.getElementById("fname");
     let email = document.getElementById("email");
+    let phone = document.getElementById("phoneNumber");
+    let comments = document.getElementById("comments");
+    let contactPref = document.querySelector('input[name="contact"]:checked').value; // target radio buttons
+
+    let isValid = true; // tracking if form is valid
+
+    //required fields 
+    if (fullName.value === "" || fullName.value.length < 1){ // name must be more than 1 letter and not empty
+        fNameError.textContent = "Full name required";
+        isValid = false;
+    } 
+    if (comments.value === ""){
+        commentsError.textContent = "Comments required."
+        isValid = false;
+    }
+
+    //regex validation
+    if (contactPref === "email"){
+        if (!regexEmail.test(email.value)){ // if not a valid email, error
+            emailError.textContent = "Enter a valid email."
+            isValid = false;
+        } 
+    }
+
+    if (contactPref === "phone"){
+        if (!regexPhone.test(phone.value)){ // if not valid phone number (10 digits)
+            phoneError.textContent = "Phone number must be 10 digits."
+            isValid = false;
+        }
+    }
+
+
+    if (!isValid) return;
+
+    // store user data in OBJECT, check zyBooks
+    let userData = {
+        name: fullName.value,
+        email: email.value,
+        phone: phone.value,
+        comments: comments.value,
+        preference: contactPref
+    }
+
+
+    // thank you message 
+    if (isValid){
+        thanksMsg.textContent = "thank you, " + fullName.value + "."
+    }
+    
+
+
+    //reset
+    contactForm.reset();
 }
 
-function displayError(){ // if form is invalid, display error next to inputs
-
+function clearErrors(){ // clears all error messages
+    fNameError.textContent = "";
+    emailError.textContent = "";
+    phoneError.textContent = "";
+    commentsError.textContent = "";
 }
